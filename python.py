@@ -1,3 +1,5 @@
 name = input("What is your name? :")
 print(name)
-print("Welcome to my python progran where i test some code sometimes.")
+print(f"Hello {name} Welcome to my python progran where i test some code sometimes.")
+age = input("How old are you?")
+print(f"Hello {name} you are {age} years old")
