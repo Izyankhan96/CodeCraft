@@ -15,7 +15,7 @@ for i in range(len(flavors)):
     print(i + 1, flavors[i])
 choice = input("What flavor do you like? :")
 print(f"{choice} is a great flavor")
-choice2 = input("Pick an Ice cream flavor :")
+choice2 = input("Tell me an Ice cream flavor :")
 flavors2 = ["Vanilla"]
 flavors2.append("Chocolate")
 flavors2.append("Mango")
