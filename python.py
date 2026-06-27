@@ -19,7 +19,8 @@ choice2 = input("Tell me an Ice cream flavor :")
 flavors2 = ["Vanilla"]
 flavors2.append("Chocolate")
 flavors2.append("Mango")
-print(flavors2)
+for i in range(len(flavors2)):
+    print(i + 1, flavors2[i])
 while choice2 not in flavors2:
     print("Sorry we dont have that flavor please try again")
     choice2 = input("Pick an Ice cream flavor :")
