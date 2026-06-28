@@ -15,12 +15,12 @@ for i in range(len(flavors)):
     print(i + 1, flavors[i])
 choice = input("What flavor do you like? :")
 print(f"{choice} is a great flavor")
-choice2 = input("Tell me an Ice cream flavor :")
 icecream = ["Vanilla"]
 icecream.append("Chocolate")
 icecream.append("Mango")
 for i in range(len(icecream)):
     print(i + 1, icecream[i])
+choice2 = input("Whats your favorite ice cream flavor :")
 while choice2 not in icecream:
     print("Sorry we dont have that flavor please try again")
     choice2 = input("Pick an Ice cream flavor :")
