@@ -1,3 +1,4 @@
+#This is a code which asks the user to guess a password once the user guesses the password the user will move on to the next part of the code.
 name = input("What is your name? :")
 print(name)
 print(f"Hello {name} Welcome to my python program where i test some code sometimes.")
