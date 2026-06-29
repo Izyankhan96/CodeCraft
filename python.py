@@ -13,7 +13,10 @@ flavors.append("Chicken")
 flavors.append("Margarita")
 for i in range(len(flavors)):
     print(i + 1, flavors[i])
-choice = input("What flavor do you like? :")
+choice = input("What is your favorite flavor? :")
+while choice not in flavors:
+    print("Sorry we dont have that flavor Please try again ")
+    choice = input("What is your favorite flavor? :")
 print(f"{choice} is a great flavor")
 icecream = ["Vanilla"]
 icecream.append("Chocolate")
@@ -25,3 +28,15 @@ while choice2 not in icecream:
     print("Sorry we dont have that flavor please try again")
     choice2 = input("Pick an Ice cream flavor :")
 print(f"{choice2} is a great flavor")
+options = ["Dog","Cat","Tiger"]
+options.append("Lion")
+options.append("Giraffe")
+options.append("Turtle")
+options.append("Dinosour")
+for i in range(len(options)):
+    print(i + 1, options[i])
+question = input("Whats your favorite animal? :")
+while question not in options:
+    print("Sorry please choose an animal from the given options")
+    question = input("Whats your favorite animal? :")
+print(f"{question} is a great pet")
