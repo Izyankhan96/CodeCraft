@@ -4,6 +4,11 @@ print(name)
 print(f"Hello {name} Welcome to my Python Program")
 age = input("How old are you? :")
 print(f"Hello {name} you are {age} years old")
+question = input("Try guessing the number :")
+while question != "738721":
+    print("Please try again")
+    question = input("Try guessing the number :")
+print("Thats correct now lets try something harder this time")
 guess = input("Try guessing the password :")
 while guess != "Python Program":
     print("That is incorrect please try again")
