@@ -1,9 +1,15 @@
 #This is a code which asks the user to guess a password once the user guesses the password the user will move on to the next part of the code.
+print("Welcome to the Fun Program!")
 name = input("What is your name? :")
-print(name)
-print(f"Hello {name} Welcome to my Python Program")
-age = input("How old are you? :")
-print(f"Hello {name} you are {age} years old")
+while name != "Izyan":
+    print("Please re-enter your name as that name was not recognized")
+    name = input("What is your name? :")
+print("Hello Izyan! Welcome back!")
+password = input("Please enter your password :")
+while password != "Izyan124":
+    print("That is incorrect please try again")
+    password = input("Please enter your password? :")
+print("That is correct please answer the questions below!")
 question = input("Try guessing the number :")
 while question != "738721":
     print("Please try again")
@@ -68,7 +74,6 @@ while guess5 != "pythonProgram3736@3667":
     print("That is incorrect please try again")
     guess5 = input("Try guessing the password :")
 print("Thats correct! I have a couple more questions for you")
-question2 = input("What is your favorite color? :")
 colors = ["Red","Blue","Green","Yellow","Orange","Purple"]
 colors.append("Pink")
 colors.append("Silver")
@@ -85,7 +90,13 @@ colors.append("Navy")
 colors.append("Olive Green")
 for i in range(len(colors)):
     print(i + 1, colors[i])
+question2 = input("What is your favorite color? :")
 while question2 not in colors:
     print("Sorry please choose a color from the given options")
     question2 = input("What is your favorite color? :")
 print(f"{question2} is a great color")
+cars = {"Mazda","Toyota","Tesla","Honda","Hyundai","Lexus","BYD"}
+for i in range(len(cars)):
+    print(i + 1, cars[i])
+question3 = input("Whats your favorite car choose from the options given below :")
+print(f"{question3}, is a great car")
