@@ -95,7 +95,7 @@ while question2 not in colors:
     print("Sorry please choose a color from the given options")
     question2 = input("What is your favorite color? :")
 print(f"{question2} is a great color")
-cars = {"Mazda","Toyota","Tesla","Honda","Hyundai","Lexus","BYD"}
+cars = ["Mazda","Toyota","Tesla","Honda","Hyundai","Lexus","BYD"]
 for i in range(len(cars)):
     print(i + 1, cars[i])
 question3 = input("Whats your favorite car choose from the options given below :")
