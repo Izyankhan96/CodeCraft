@@ -9,7 +9,7 @@ A visitor arrives at the FunPark gate. The program:
 
 1. Asks for their name and greets them.
 2. Asks for their age and turns away anyone **under 15**.
-3. Asks for the PIN on their prepaid ticket and lets them in only if it is correct.
+3. Offers to generate a strong password for the visitor's park account (they can say no).
 4. Shows a main menu that keeps coming back until the visitor chooses to leave.
 
 Tickets are prepaid, so there is **no wallet, money, or balance** in this project.
@@ -48,20 +48,24 @@ Tickets are prepaid, so there is **no wallet, money, or balance** in this projec
 
 ---
 
-## Phase 3: Ticket PIN
+## Phase 3: Password generator
 
-**Goal:** Ask for the PIN on the visitor's prepaid ticket. Only a correct PIN gets them through the gate.
+**Goal:** Offer the visitor a randomly generated password for their park account. They can accept, ask for a new one, or skip.
 
 **Done when:**
-- The correct PIN lets the visitor in.
-- A wrong PIN shows a message and lets them try again.
-- After **3** wrong tries, the visitor is turned away and the program ends.
+- The visitor is asked whether they want a password generated (yes / no).
+- "Yes" shows a random password, and running again gives a different one.
+- The visitor can ask for another password if they don't like the first.
+- "No" skips straight to the main menu.
+- Answers like `Y`, `yes`, ` YES ` all count as yes, and anything unexpected doesn't crash.
 
 **Hints:**
-- Store the correct PIN in a variable near the top of the file so it is easy to change.
-- Decide whether to compare the PIN as text or as a number. Which one keeps a PIN like `0420` working?
-- A loop with a counter is a good way to limit attempts.
-- Show how many tries are left after each wrong guess.
+- Look at the `string` module: it has ready-made groups of letters, digits and symbols.
+- The `random` module can pick characters, but the `secrets` module is the one meant for passwords. Read about why.
+- Building a string one character at a time in a loop works. So does `"".join(...)`.
+- Store the password length in a variable near the top so it is easy to change. Try 12.
+- `.lower()` and `.strip()` make yes/no answers easier to check.
+- Bonus: make sure the password has at least one letter, one digit and one symbol.
 
 ---
 
@@ -93,7 +97,7 @@ Example options (pick your own if you like):
 **Goal:** Split the program into small functions so each part does one job.
 
 **Done when:**
-- There is one function per step, for example: welcome, get name, check age, check PIN, main menu.
+- There is one function per step, for example: welcome, get name, check age, generate password, main menu.
 - A single `main()` function calls them in order.
 - The program only starts when the file is run directly.
 
@@ -110,7 +114,8 @@ Pick any that sound fun:
 - **Ride details:** when the visitor picks "See the rides", show a sub-menu where they choose a ride and get a short description.
 - **Ride height or age limits:** some rides need the visitor to be older than 15. Reuse the age you already asked for.
 - **Visit summary:** keep a list of everything the visitor did and print it when they leave.
-- **Hide the PIN:** look up the `getpass` module so the PIN is not shown while typing.
+- **Choose the length:** let the visitor pick how long their password should be (with a sensible minimum).
+- **Password strength:** rate a password the visitor types as weak, okay or strong.
 - **Clear screen** between menus for a cleaner look.
 
 Remember: still no wallet or money, because tickets are prepaid.
@@ -124,9 +129,9 @@ Run the program and try each of these by hand:
 - [ ] Empty name
 - [ ] Age `14` (refused), `15` (allowed), `16` (allowed)
 - [ ] Age `abc` (no crash)
-- [ ] Correct PIN on the first try
-- [ ] Wrong PIN twice, then correct
-- [ ] Wrong PIN three times (turned away)
+- [ ] Say yes to a password, then ask for another one
+- [ ] Say no to a password (goes to the menu)
+- [ ] Answer the password question with `Y`, ` yes `, and `maybe`
 - [ ] Every menu option
 - [ ] Invalid menu choice (`9`, `hello`, empty)
 - [ ] Leave the park (goodbye with name)

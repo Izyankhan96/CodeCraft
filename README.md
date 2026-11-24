@@ -8,7 +8,7 @@ When you run it, you arrive at the FunPark gate:
 
 1. **Name:** you are asked for your name and greeted.
 2. **Age check:** visitors **under 15** are politely turned away.
-3. **Ticket PIN:** you enter the PIN from your prepaid ticket. Three wrong tries and you are turned away.
+3. **Password generator:** you are offered a strong, randomly generated password for your park account. You can take it, ask for another, or skip.
 4. **Main menu:** once inside, a menu lets you explore the park (rides, snacks, gift shop) and keeps coming back until you choose to leave.
 
 Tickets are prepaid, so there is no wallet or money in the program.
